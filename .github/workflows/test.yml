@@ -1,4 +1,4 @@
-name: SonarCloud Scan
+name: SonarCloud Scanner
 
 # Trigger analysis when pushing in development/master or pull requests, and when creating
 # a pull request.

@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tsetenl2_sonar_cloud_test&metric=alert_status)](https://sonarcloud.io/dashboard?id=tsetenl2_sonar_cloud_test)
 
 ## Available Scripts
 
