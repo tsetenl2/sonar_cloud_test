@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Install modules
         run: yarn
       - name: Run tests and create coverage report
