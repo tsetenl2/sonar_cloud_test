@@ -1,4 +1,4 @@
-name: SonarCloud Scanner v4
+name: SonarCloud Scanner
 
 # Trigger analysis when pushing/merging into development/master
 on:
@@ -22,7 +22,5 @@ jobs:
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-          #           GITHUB_TOKEN: "5832b4992c00aa34170bae3bb0a2aa5f34157113"
-          # SONAR_TOKEN: "5db4686a59de16726619220f86460d2a97cc1306"
