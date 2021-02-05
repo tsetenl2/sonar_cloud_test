@@ -1,16 +1,12 @@
-name: SonarCloud Scanner v3
+name: SonarCloud Scanner
 
-# Trigger analysis when pushing in development/master or pull requests, and when creating
-# a pull request.
-
+# Trigger analysis when pushing/merging into development/master
 on:
   push:
     branches:
       - "main"
       - "master"
       - "development"
-  pull_request:
-    types: [opened, synchronize, reopened]
 
 jobs:
   sonarCloudTrigger:
@@ -19,6 +15,11 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - run: npm run test -- --coverage
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
